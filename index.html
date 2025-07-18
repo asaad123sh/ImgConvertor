@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiral Img Converotr - Convert PNG to JPG, JPEG, PDF, BMP, ICO</title>
+    <meta name="description" content="Convert multiple images (PNG, JPG, JPEG, BMP, ICO) to PDF or any image format. Free, fast, browser-based image converter. No install required.">
+    <meta name="keywords" content="image converter, convert png to jpg, png to pdf, jpeg to bmp, image to pdf, batch image converter, online image tool, spiral, img, pdf, word, bmp, convertor">
+    <meta name="author" content="Asaad Shakeel">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1 class="webtit">Img Convert</h1>
+
+    <div class="container">
+        <h1>Image Converter</h1>
+
+        <input type="file" id="imageInput" accept="image/*" multiple><br>
+
+        <select id="formatSelect">
+            <option value="jpg">JPG</option>
+            <option value="jpeg">JPEG</option>
+            <option value="bmp">BMP</option>
+            <option value="ico">ICO</option>
+            <option value="pdf">PDF</option>
+        </select>
+
+        <button onclick="convertAllImages()">Convert All</button>
+
+        <div id="progressContainer" style="display:none; margin-top: 10px;">
+            <label for="progressBar">Converting...</label>
+            <progress id="progressBar" value="0" max="100" style="width:100%; height: 20px;"></progress>
+        </div>
+
+        <div id="downloads"></div>
+    </div>
+
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <!-- SEO-Friendly About Section -->
+    <section class="about" style="max-width: 800px; margin: 40px auto; padding: 20px; font-family: Arial, sans-serif; background: #f9f9f9; border-radius: 10px;">
+        <h2>About Multi Image Converter</h2>
+        <p>
+            <strong>Multi Image Converter</strong> is a free, easy-to-use online tool that allows you to convert multiple images at once from PNG, JPG, JPEG, BMP, or ICO formats into any of these formats or a single combined PDF file.
+        </p>
+        <p>
+            This browser-based tool works directly on your device without uploading your images to a server. Your data stays secure and private. Simply select your image files, choose an output format (JPG, JPEG, BMP, ICO, or PDF), and convert them in a single click.
+        </p>
+        <p>
+            Ideal for students, designers, developers, and professionals who need quick format changes or want to combine images into a PDF document. No installations or sign-ups required. Fast, free, and mobile-friendly!
+        </p>
+
+        <h3>Supported Formats:</h3>
+        <ul>
+            <li>PNG to JPG, JPEG, BMP, ICO, PDF</li>
+            <li>JPG to PNG, JPEG, BMP, ICO, PDF</li>
+            <li>Multiple images into one PDF</li>
+        </ul>
+
+        <p>
+            Made with ❤️ by Asaad Shakeel. Publish this tool on GitHub Pages and share it freely with anyone who needs a powerful image converter online.
+        </p>
+    </section>
+</body>
+
+</html>
